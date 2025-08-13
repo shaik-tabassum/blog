@@ -1,0 +1,67 @@
+/* Custom styles and animations */
+@keyframes heartPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 1;
+    }
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.heart-pulse {
+    animation: heartPulse 1.5s infinite;
+}
+.fade-in-scale {
+    animation: fadeInScale 1s ease-out forwards;
+}
+.proposing-text {
+    font-family: 'Dancing Script', cursive;
+}
+.gradient-bg {
+    background: linear-gradient(-45deg, #f4c2c2, #f5d4d4, #c9a4e3, #b49fdf);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+.heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 2rem;
+    animation: confettiFall 10s linear infinite;
+}
+.heart:nth-child(2n) { animation-delay: 1s; }
+.heart:nth-child(3n) { animation-delay: 2s; }
+.heart:nth-child(4n) { animation-delay: 3s; }
+.heart:nth-child(5n) { animation-delay: 4s; }
